@@ -44,7 +44,7 @@ img {
 }
 /* Styles Phone & > */
 .container {
-  min-width: 320px;
+  min-width: 100%;
   max-width: 428px;
   margin-left: auto;
   margin-right: auto;
@@ -261,11 +261,10 @@ button {
   color: var(--logo-dark-txt-container);
   transition: color var(--cubic);
 }
-@media only screen and (max-width: 768px) {
-  .header-link {
-    display: none;
-  }
+.header-link {
+  display: none;
 }
+
 @media only screen and (min-width: 768px) {
   .header-link {
     display: block;
@@ -367,7 +366,7 @@ button {
     gap: 120px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .address-list {
     display: flex;
     flex-direction: column;
@@ -377,6 +376,7 @@ button {
 
 @media only screen and (min-width: 1158px) {
   .header-nav {
+    flex-direction: row;
     align-items: center;
     margin-right: auto;
     display: flex;
