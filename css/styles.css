@@ -90,7 +90,7 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 48px;
+  /* margin-top: 72px; */
   min-width: 169px;
   font-family: var(--primary-font);
   font-weight: 500;
@@ -145,7 +145,7 @@ button {
   border: 1px solid transparent;
 }
 
-.title {
+/* .title {
   margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
@@ -158,24 +158,109 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--light-txt-cl);
+} */
+
+.title {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  /* text-transform: capitalize; */
+  color: var(--light-txt-cl);
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
 }
 
 .dark-bg {
   background: var(--logo-dark-txt-container);
 }
+
 .hero-images {
-  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 112px;
+  padding-bottom: 112px;
   background: var(--logo-dark-txt-container);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-images/people-office.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    url(../images/hero/Dark-bgmob@1x.jpg);
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-images {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bgmob@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-images {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bgtablet@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-images {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bgtablet@2x.jpg);
+    }
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-images {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bgdesk@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-images {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bgdesk@2x.jpg);
+    }
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-images {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
 }
 
 .footer-text {
@@ -261,8 +346,8 @@ button {
   color: var(--logo-dark-txt-container);
   transition: color var(--cubic);
 }
- .header-link {
-  display: none; 
+.header-link {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -349,7 +434,6 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-
 @media only screen and (min-width: 768px) {
   .header-nav-list {
     display: flex;
@@ -386,41 +470,69 @@ button {
     gap: 40px;
   }
 }
+.subtitle {
+  margin-right: 0;
+}
 
 .section-studio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media only screen and (min-width: 1158px) {
+  .section-studio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 .section-pic {
   padding-bottom: 120px;
 }
 
-.title-container {
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
 .section-icon {
   background: var(--logo-btn-txt);
   border-radius: 4px;
   width: 264px;
   height: 112px;
 }
+
 .about-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
 }
+@media only screen and (max-width: 1158px) {
+  .section-icon,
+  .about-icon {
+    display: none;
+  }
+}
 
 .uppertitle {
   margin-bottom: 8px;
   font-family: var(--primary-font);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
   letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
   color: var(--logo-dark-txt-container);
 }
+
+@media only screen and (min-width: 768px) {
+  .uppertitle {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .uppertitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
 .caption {
   margin-bottom: 72px;
   font-family: var(--primary-font);
@@ -450,11 +562,23 @@ button {
 .text {
   font-family: var(--primary-font);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
+}
+
+@media only screen and (min-width: 768px) {
+  .text {
+    /* width: 356px; */
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .text {
+    font-weight: 400;
+    width: 264px;
+  }
 }
 .picture {
   background-color: var(--light-txt-cl);
@@ -464,12 +588,40 @@ button {
 
 .container-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  gap: 72px;
 }
-.subtitle {
-  width: 264px;
+
+@media only screen and (min-width: 768px) {
+  .container-list {
+    /* display: flex; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  .subtitle {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container-list {
+    /* display: flex; */
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .subtitle {
+    width: calc((100% - 24px) / 4);
+  }
+}
+
 .images-list {
   display: flex;
   flex-wrap: wrap;
@@ -972,7 +1124,7 @@ button {
   outline: none;
 }
 .menu-toggle-btn {
-  stroke: #2E2F42;
+  stroke: #2e2f42;
 }
 @media (min-width: 768px) {
   .menu-toggle {
@@ -1041,7 +1193,6 @@ button {
   text-transform: capitalize;
 }
 .mobile-studio.current {
- 
   color: #404bbf;
 }
 
