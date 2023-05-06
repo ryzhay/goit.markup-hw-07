@@ -44,7 +44,7 @@ img {
 }
 /* Styles Phone & > */
 .container {
-  min-width: 100%;
+  min-width: 320px;
   max-width: 428px;
   margin-left: auto;
   margin-right: auto;
@@ -261,8 +261,8 @@ button {
   color: var(--logo-dark-txt-container);
   transition: color var(--cubic);
 }
-.header-link {
-  display: none;
+ .header-link {
+  display: none; 
 }
 
 @media only screen and (min-width: 768px) {
@@ -300,12 +300,10 @@ button {
   font-style: normal;
   transition: color var(--cubic);
 }
-
-@media only screen and (max-width: 768px) {
-  .header-contact {
-    display: none;
-  }
+.header-contact {
+  display: none;
 }
+
 @media only screen and (min-width: 768px) {
   .header-contact {
     display: block;
@@ -350,16 +348,21 @@ button {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-.header-nav-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+
+
+@media only screen and (min-width: 768px) {
+  .header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 }
+
 .header-nav {
   align-items: center;
   margin-right: auto;
   display: flex;
-  gap: 40px;
+  /* gap: 40px; */
 }
 @media only screen and (min-width: 768px) {
   .header-nav {
@@ -957,8 +960,6 @@ button {
 
 /* Mobile menu */
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -969,6 +970,9 @@ button {
   border: none;
   border-radius: 50%;
   outline: none;
+}
+.menu-toggle-btn {
+  stroke: #2E2F42;
 }
 @media (min-width: 768px) {
   .menu-toggle {
@@ -987,7 +991,9 @@ button {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding-top: 80px;
+  padding-right: 35px;
+  padding-left: 40px;
   background-color: var(--light-txt-cl);
   z-index: 999;
   transform: translateX(100%);
@@ -1022,7 +1028,7 @@ button {
 }
 .mobile-menu .link {
   display: block;
-  padding: 10px;
+  margin-bottom: 40px;
   color: #2e2f42;
   text-decoration: none;
   font-family: "Roboto";
@@ -1035,13 +1041,10 @@ button {
   text-transform: capitalize;
 }
 .mobile-studio.current {
-  padding-top: 80px;
-  padding-bottom: 40px;
+ 
   color: #404bbf;
 }
-.mobile-list {
-  margin-bottom: 40px;
-}
+
 .mobile-tel {
   font-weight: 700;
   font-size: 36px;
@@ -1052,7 +1055,6 @@ button {
   margin-bottom: 40px;
 }
 .mobile-mail {
-  margin-bottom: 48px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -1062,8 +1064,9 @@ button {
 }
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 56px;
 }
 .mobile-contacts {
-  margin-bottom: 44px;
+  margin-bottom: 48px;
 }
