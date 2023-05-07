@@ -136,6 +136,11 @@
           <ul class="list images-list">
             <li class="pic">
               <img
+                srcset="
+                  ./images/doing/.img1_@1x.jpg 1x,
+                  ./images/doing/img1_@2x.jpg  2x
+                "
+                sizes="360px"
                 src="./images/img1.jpg"
                 width="360"
                 height="300"
@@ -144,6 +149,11 @@
             </li>
             <li class="pic">
               <img
+                srcset="
+                  ./images/doing/.img2_@1x.jpg 1x,
+                  ./images/doing/img2_@2x.jpg  2x
+                "
+                sizes="360px"
                 src="./images/img2.jpg"
                 width="360"
                 height="300"
@@ -152,6 +162,11 @@
             </li>
             <li class="pic">
               <img
+                srcset="
+                  ./images/doing/.img3_@1x.jpg 1x,
+                  ./images/doing/img3_@2x.jpg  2x
+                "
+                sizes="360px"
                 src="./images/img3.jpg"
                 width="360"
                 height="300"
@@ -161,12 +176,17 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="light-bg section-studio">
+      <section class="light-bg section-studio">
         <div class="container">
           <h2 class="caption">Our Team</h2>
           <ul class="list team-list">
             <li class="picture team-item team-card">
               <img
+                srcset="
+                  ./images/team/img1_team@1x.jpg 1x,
+                  ./images/team/img1_team@2x.jpg 2x
+                "
+                sizes="264px"
                 src="./images/img4.jpg"
                 width="264"
                 height="260"
@@ -174,7 +194,7 @@
               />
               <div class="team-wrapper">
                 <h3 class="uppertitle team-uppertitle">Mark Guerrero</h3>
-                <p class="text team-text">Product Designer</p>
+                <p class="text-card team-text">Product Designer</p>
 
                 <ul class="list social">
                   <li class="social-item">
@@ -231,6 +251,11 @@
             </li>
             <li class="picture team-item team-card">
               <img
+                srcset="
+                  ./images/team/img2_team@1x.jpg 1x,
+                  ./images/team/img2_team@2x.jpg 2x
+                "
+                sizes="264px"
                 src="./images/img5.jpg"
                 width="264"
                 height="260"
@@ -238,7 +263,7 @@
               />
               <div class="team-wrapper">
                 <h3 class="uppertitle team-uppertitle">Tom Ford</h3>
-                <p class="text team-text">Frontend Developer</p>
+                <p class="text-card team-text">Frontend Developer</p>
                 <ul class="list social">
                   <li class="social-item">
                     <a
@@ -294,6 +319,11 @@
             </li>
             <li class="picture team-item team-card">
               <img
+                srcset="
+                  ./images/team/img3_team@1x.jpg 1x,
+                  ./images/team/img3_team@2x.jpg 2x
+                "
+                sizes="264px"
                 src="./images/img6.jpg"
                 width="264"
                 height="260"
@@ -301,7 +331,7 @@
               />
               <div class="team-wrapper">
                 <h3 class="uppertitle team-uppertitle">Camila Garcia</h3>
-                <p class="text team-text">Marketing</p>
+                <p class="text-card team-text">Marketing</p>
                 <ul class="list social">
                   <li class="social-item">
                     <a
@@ -357,6 +387,11 @@
             </li>
             <li class="picture team-item team-card">
               <img
+                srcset="
+                  ./images/team/img4_team@1x.jpg 1x,
+                  ./images/team/img4_team@2x.jpg 2x
+                "
+                sizes="264px"
                 src="./images/img7.jpg"
                 width="264"
                 height="260"
@@ -364,7 +399,7 @@
               />
               <div class="team-wrapper">
                 <h3 class="uppertitle team-uppertitle">Daniel Wilson</h3>
-                <p class="text team-text">UI Designer</p>
+                <p class="text-card team-text">UI Designer</p>
                 <ul class="list social">
                   <li class="social-item">
                     <a
@@ -420,8 +455,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="customers-container">
+      </section>
+      <section class="customers-container">
         <div class="container">
           <h2 class="caption">Customers</h2>
 
@@ -470,10 +505,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <!-- <footer class="dark-bg logo-footer">
+    <footer class="dark-bg logo-footer">
       <div class="footer-link container">
         <div class="container-logo">
           <a class="logo link logo-text" href="./index.html"
@@ -541,16 +576,16 @@
         <div class="subscrite-container">
           <p class="title-subscribe">Subscribe</p>
           <form class="subscribe-form" name="subscribe_form">
+            <label class="subscribe-label-form"></label>
             <div class="subscrite-container-form">
-              <label class="subscribe-label-form">
-                <input
-                  class="subscribe-input-form"
-                  type="text"
-                  name="user_email"
-                  placeholder="E-mail"
-                  required
-                />
-              </label>
+              <input
+                class="subscribe-input-form"
+                type="text"
+                name="user_email"
+                placeholder="E-mail"
+                required
+              />
+
               <button class="subscribe-btn-form" class="" type="submit">
                 Subscribe
                 <svg class="subscribe-icon-form" width="24" height="20">
@@ -561,7 +596,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
@@ -585,7 +620,7 @@
             <svg class="modal-form-icon" width="12" height="12">
               <use href="./images/icons.svg#icon-name"></use>
             </svg>
-          </div> 
+          </div>
 
           <label class="modal-form-label" for="user_tel">Phone</label>
 
@@ -654,7 +689,7 @@
           <button class="btn-form" tupe="submit">Send</button>
         </form>
       </div>
-    </div> 
+    </div>
     <!-- Mobile menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">

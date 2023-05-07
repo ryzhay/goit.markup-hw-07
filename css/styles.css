@@ -51,8 +51,6 @@ img {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 /* Tablet styles & > */
 @media only screen and (min-width: 768px) {
@@ -91,7 +89,6 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 72px; */
   min-width: 169px;
   font-family: var(--primary-font);
   font-weight: 500;
@@ -146,21 +143,6 @@ button {
   border: 1px solid transparent;
 }
 
-/* .title {
-  margin-bottom: 48px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 496px;
-  display: block;
-  font-family: var(--primary-font);
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--light-txt-cl);
-} */
-
 .title {
   max-width: 320px;
   margin-left: auto;
@@ -173,7 +155,6 @@ button {
   line-height: 1.1;
   text-align: center;
   letter-spacing: 0.02em;
-  /* text-transform: capitalize; */
   color: var(--light-txt-cl);
 }
 
@@ -266,6 +247,7 @@ button {
 
 .footer-text {
   width: 264px;
+  text-align: left;
   font-family: var(--primary-font);
   font-weight: 400;
   font-size: 16px;
@@ -284,10 +266,18 @@ button {
 }
 .social-footer {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 .social-media {
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .social-media {
+    justify-content: left;
+  }
 }
 .social-item {
   width: 40px;
@@ -296,15 +286,51 @@ button {
 
 .footer-link {
   display: flex;
-
-  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 72px 24px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-link {
+    gap: 74px 24px;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-link {
+    align-items: baseline;
+  }
 }
 .container-logo {
-  width: 264px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .container-logo {
+    text-align: left;
+    margin-left: 108px;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container-logo {
+    margin-left: 0;
+  }
 }
 .container-icon {
-  margin-left: 120px;
-  width: 208px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .container-icon {
+    text-align: left;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container-icon {
+    margin-left: 120px;
+    width: 208px;
+  }
 }
 .logo {
   margin-right: auto;
@@ -330,7 +356,14 @@ button {
   color: var(--logo-btn-txt);
 }
 .logo-text {
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .logo-text {
+    justify-content: left;
+  }
 }
 .logo-footer {
   padding-top: 100px;
@@ -447,7 +480,6 @@ button {
   align-items: center;
   margin-right: auto;
   display: flex;
-  /* gap: 40px; */
 }
 @media only screen and (min-width: 768px) {
   .header-nav {
@@ -575,11 +607,6 @@ button {
   color: var(--main-txt-cl);
 }
 
-@media only screen and (min-width: 768px) {
-  .text {
-  
-  }
-}
 @media only screen and (min-width: 1158px) {
   .text {
     font-weight: 400;
@@ -595,13 +622,11 @@ button {
 .container-list {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   gap: 72px;
 }
 
 @media only screen and (min-width: 768px) {
   .container-list {
-    /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -617,7 +642,6 @@ button {
 
 @media only screen and (min-width: 1158px) {
   .container-list {
-    /* display: flex; */
     gap: 24px;
   }
 }
@@ -634,16 +658,24 @@ button {
   gap: 24px;
 }
 .pic {
- width: calc((100% - 48px) / 3);
-  
+  width: calc((100% - 48px) / 3);
 }
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
+  justify-content: center;
 }
-.team-item {
-  width: calc((100% - (24px * 3)) / 4);
+
+@media only screen and (min-width: 768px) {
+  .team-list {
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .team-item {
+    width: calc((100% - (24px * 3)) / 4);
+  }
 }
 .team-wrapper {
   padding: 32px 0;
@@ -655,11 +687,22 @@ button {
   border-bottom-left-radius: 4px;
 }
 .team-uppertitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   text-align: center;
 }
 .team-text {
   text-align: center;
   margin-bottom: 8px;
+}
+.text-card {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
 }
 .social {
   display: flex;
@@ -701,8 +744,25 @@ button {
 }
 
 .subscrite-container {
-  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
   width: 453px;
+}
+
+@media only screen and (min-width: 768px) {
+  .subscrite-container {
+    justify-content: left;
+    margin-left: 108px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .subscrite-container {
+    margin-left: auto;
+    width: 453px;
+  }
 }
 .title-subscribe {
   font-family: "Roboto";
@@ -718,32 +778,39 @@ button {
 
 .subscrite-container-form {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
-.subscribe-label-form {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 0.5;
-  letter-spacing: 0.04em;
+@media only screen and (min-width: 1158px) {
+  .subscrite-container-form {
+    gap: 24px;
+  }
+}
 
-  color: #ffffff;
-}
 .subscribe-input-form::placeholder {
   color: var(--light-txt-cl);
   opacity: 1;
 }
 
 .subscribe-input-form {
-  width: 264px;
+  width: 100%;
   height: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.5;
+  letter-spacing: 0.04em;
   background-color: var(--logo-dark-txt-container);
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: var(--light-txt-cl);
   padding: 8px 16px;
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-input-form {
+    width: 264px;
+  }
 }
 .subscribe-btn-form {
   width: 165px;
@@ -847,14 +914,25 @@ button {
 
 .customers {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 72px 16px;
+}
+@media only screen and (min-width: 768px) {
+  .customers {
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
 }
 .customers-icon {
   fill: currentColor;
 }
-.icon-list {
-  width: calc((100% - (24px * 5)) / 6);
+
+@media only screen and (min-width: 1158px) {
+  .icon-list {
+    width: calc((100% - (24px * 5)) / 6);
+  }
 }
 .icon-item {
   fill: currentColor;
@@ -864,10 +942,17 @@ button {
   border: 1px solid var(--icon);
   border-radius: 4px;
   color: var(--icon);
-  width: 168px;
+  width: 190px;
   height: 88px;
   transition: border-color var(--cubic), color var(--cubic), fill var(--cubic);
 }
+@media only screen and (min-width: 768px) {
+  .icon-item {
+    width: 168px;
+    height: 88px;
+  }
+}
+
 .icon-item:hover,
 .icon-item:focus {
   border-color: var(--okean-active-btn);
@@ -887,6 +972,7 @@ button {
   border-color: var(--okean-active-btn);
   color: var(--okean-active-btn);
 }
+/* Modal */
 
 .backdrop {
   position: fixed;
@@ -902,6 +988,7 @@ button {
   visibility: visible;
   pointer-events: initial;
   transition: opacity 800ms var(--cubic), visibility 800ms var(--cubic);
+  overflow: scroll;
 }
 .is-hidden {
   opacity: 0;
@@ -916,15 +1003,26 @@ button {
   transform: translate(-50%, -50%);
   opacity: 1;
 
-  width: 408px;
-  height: 576px;
-  padding: 24px;
+  width: 392px;
+  min-height: 576px;
+  padding: 72px 16px 24px 16px;
 
   background: var(--modal-window);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: opacity 800ms var(--cubic), visibility 800ms var(--cubic);
+}
+@media only screen and (max-width: 391px) {
+  .modal {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
 }
 .backdrop.is-hidden.modal {
   opacity: 0;
@@ -967,11 +1065,14 @@ button {
   fill: var(--light-txt-cl);
   background-color: var(--okean-active-btn);
 }
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
 .modal-title {
   display: block;
 
   margin-bottom: 16px;
-  margin-top: 48px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
