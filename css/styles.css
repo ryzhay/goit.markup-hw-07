@@ -1241,7 +1241,7 @@ button {
 }
 
 .menu-toggle:hover,
-.menu-toggle:focus  {
+.menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .menu-toggle-btn {
