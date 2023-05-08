@@ -1239,8 +1239,11 @@ button {
     display: none;
   }
 }
+
 .menu-toggle:hover,
 .menu-toggle:focus {
+  width: 44px;
+  height: 40px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 .menu-container {
@@ -1313,6 +1316,11 @@ button {
   color: var(--accent-txt-cl);
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 427px) {
+  .mobile-tel {
+    font-size: 24px;
+  }
+}
 .mobile-mail {
   font-weight: 500;
   font-size: 20px;
@@ -1325,6 +1333,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 56px;
+}
+@media only screen and (max-width: 427px) {
+  .mobile-social {
+    gap: 25px;
+  }
 }
 .mobile-contacts {
   margin-bottom: 48px;
