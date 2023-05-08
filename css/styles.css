@@ -1063,7 +1063,9 @@ button {
 .modal-btn:hover .modal-icon,
 .modal-btn:focus .modal-icon {
   fill: var(--light-txt-cl);
-  background-color: var(--okean-active-btn);
+}
+.modal-icon {
+  transition: fill var(--cubic);
 }
 .modal-form {
   display: flex;
@@ -1231,9 +1233,7 @@ button {
   border-radius: 50%;
   outline: none;
 }
-.menu-toggle-btn {
-  stroke: #2e2f42;
-}
+
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
@@ -1241,11 +1241,13 @@ button {
 }
 
 .menu-toggle:hover,
-.menu-toggle:focus {
-  width: 44px;
-  height: 40px;
+.menu-toggle:focus  {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.menu-toggle-btn {
+  stroke: #2e2f42;
+}
+
 .menu-container {
   position: fixed;
   top: 0;
